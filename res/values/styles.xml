@@ -1,0 +1,30 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="AppBaseTheme" parent="@style/Theme.Sherlock.Light.DarkActionBar">
+        
+    </style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        
+    </style>
+    
+    <style name="Text.Default" parent="@android:style/TextAppearance.DeviceDefault">
+        <item name="android:textColor">@color/text_default</item>
+    </style>
+    
+    <style name="Text.Label" parent="@style/Text.Default">
+        <item name="android:textColor">@color/text_label</item>
+    </style>
+    
+    <style name="Text.Header" parent="@style/Text.Default">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/text_header</item>
+    </style>
+       
+    <style name="Text.Title" parent="@style/Text.Default">
+        <item name="android:textSize">18sp</item>
+    </style>
+    
+    <color name="text_default">#1C1C1C</color>
+    <color name="text_label">#033E6B</color>
+    <color name="text_header">#07461A</color>
+</resources>
