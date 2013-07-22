@@ -6,9 +6,9 @@ import android.widget.Toast;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.blueodin.appman.content.AppListLoader;
+import com.blueodin.appman.content.AppListLoader.AppEntry;
 import com.blueodin.appman.content.Application;
-import com.blueodin.appman.content.UpdateAppDbTask;
+import com.blueodin.appman.content.Application.UpdateTask.OnUpdateComplete;
 import com.blueodin.appman.fragments.AppDetailFragment;
 import com.blueodin.appman.fragments.AppListFragment;
 import com.blueodin.appman.fragments.AppListFragment.OnAppListInteraction;
@@ -61,16 +61,17 @@ public class MainActivity extends SherlockFragmentActivity implements OnAppListI
 			.replace(R.id.frame_main_content, new AppDetailFragment())
 			.commit();
 		
-		new UpdateAppDbTask(getPackageManager()) {
-			protected void onPostExecute(List<Application> results) {
+		(new Application.UpdateTask(this, new OnUpdateComplete() {
+			@Override
+			public void onUpdateComplete(List<Application> results) {
 				mAppListFragment.refresh();
 				Toast.makeText(MainActivity.this, String.format("Updated the database with %d applications in %d seconds", results.size(), (System.currentTimeMillis() - ts)/1000), Toast.LENGTH_SHORT).show();
 			}
-		}.execute();
+		})).execute();
 	}
 
 	@Override
-	public void onAppSelected(AppListLoader.AppEntry appEntry) {
+	public void onAppSelected(AppEntry appEntry) {
 		getSupportFragmentManager().beginTransaction()
 			.replace(R.id.frame_main_content, AppDetailFragment.newInstance(appEntry))
 			.commit();
