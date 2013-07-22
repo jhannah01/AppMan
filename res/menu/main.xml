@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/action_refresh_db"
+        android:showAsAction="ifRoom"
+        android:icon="@android:drawable/ic_menu_rotate"
+        android:title="@string/action_refresh_db"/>
+    
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="@string/action_settings"/>
+    
+    <item
+        android:id="@+id/action_exit"
+        android:orderInCategory="120"
+        android:showAsAction="never"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:title="@string/action_exit"/>
+</menu>

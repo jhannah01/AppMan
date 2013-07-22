@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppMan</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_exit">Exit</string>
+    <string name="label_app_icon">Application Icon</string>
+    <string name="filler_app_name">App Name</string>
+    <string name="filler_app_package">com.package.namespace</string>
+    <string name="label_info">More Info</string>
+    <string name="label_uninstall">Uninstall</string>
+    <string name="label_select">Select</string>
+    <string name="label_is_system_app">Is System App?</string>
+    <string name="filler_no">No</string>
+    <string name="filler_yes">Yes</string>
+    <string name="label_is_enabled">Is Enabled?</string>
+    <string name="action_refresh_db">Refresh Application Database</string>
+    <string name="label_launch">Launch</string>
+</resources>

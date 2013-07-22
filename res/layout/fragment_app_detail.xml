@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/image_app_detail_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/text_app_detail_label"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@+id/text_app_detail_label"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/label_app_icon"
+        android:maxHeight="50dp"
+        android:maxWidth="50dp"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/sym_def_app_icon" />
+    <TextView
+        android:id="@+id/text_app_detail_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/filler_app_name"
+        android:textAppearance="@style/Text.Header" />
+    <TextView
+        android:id="@+id/text_app_detail_package"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/text_app_detail_label"
+        android:layout_below="@+id/image_app_detail_icon"
+        android:layout_marginTop="10dp"
+        android:text="@string/filler_app_package"
+        android:textAppearance="@style/Text.Default" />
+    
+    <TextView
+        android:id="@+id/label_app_detail_is_system_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/text_app_detail_is_system_app"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/text_app_detail_is_system_app"
+        android:text="@string/label_is_system_app"
+        android:textAppearance="@style/Text.Label" />
+    <TextView
+        android:id="@+id/text_app_detail_is_system_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/text_app_detail_label"
+        android:layout_below="@+id/text_app_detail_package"
+        android:layout_marginTop="35dp"
+        android:text="@string/filler_no"
+        android:textAppearance="@style/Text.Default" />
+    
+    <TextView
+        android:id="@+id/label_app_detail_is_enabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/text_app_detail_is_enabled"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/text_app_detail_is_enabled"
+        android:text="@string/label_is_enabled"
+        android:textAppearance="@style/Text.Label" />
+    <TextView
+        android:id="@+id/text_app_detail_is_enabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_app_detail_is_system_app"
+        android:layout_alignLeft="@+id/text_app_detail_is_system_app"
+        android:text="@string/filler_yes"
+        android:textAppearance="@style/Text.Default" />
+    
+    <Button
+        android:id="@+id/button_app_detail_launch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/button_app_detail_uninstall"
+        android:layout_alignParentBottom="true"
+        android:text="@string/label_launch" />
+    
+    <Button
+        android:id="@+id/button_app_detail_uninstall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/label_uninstall" />
+</RelativeLayout>
